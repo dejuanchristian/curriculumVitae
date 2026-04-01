@@ -1,0 +1,281 @@
+/* styles.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: #18181b;
+  color: #f1f5f9;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+.header {
+  background-color: #27272a;
+  padding: 50px 0;
+  border-bottom: 1px solid #3f3f46;
+}
+
+.header-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+}
+
+.profile-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 5px solid #10b981;
+  flex-shrink: 0;
+}
+
+.profile-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.personal-info h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.title {
+  font-size: 22px;
+  color: #10b981;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 30px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+}
+
+.contact-item i {
+  color: #10b981;
+}
+
+.contact-item a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  color: #10b981;
+}
+
+/* Main Layout */
+.main-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 50px;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #27272a;
+  padding: 30px;
+  border-radius: 16px;
+  height: fit-content;
+  position: sticky;
+  top: 20px;
+}
+
+.sidebar section {
+  margin-bottom: 40px;
+}
+
+.sidebar h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #10b981;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.sidebar h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: #10b981;
+}
+
+.summary-text {
+  color: #cbd5e1;
+  font-size: 15.5px;
+}
+
+.skill-group {
+  margin-bottom: 24px;
+}
+
+.skill-group h3 {
+  font-size: 15px;
+  margin-bottom: 10px;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-tags span {
+  background-color: #3f3f46;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 13px;
+  color: #e2e8f0;
+}
+
+/* Content Area */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.content h2 {
+  font-size: 26px;
+  margin-bottom: 24px;
+  color: #10b981;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.content h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: #10b981;
+}
+
+/* Experience */
+.experience-item {
+  margin-bottom: 35px;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.experience-header h3 {
+  font-size: 18px;
+}
+
+.company {
+  color: #10b981;
+  font-size: 15px;
+}
+
+.date {
+  color: #94a3b8;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.experience-item ul {
+  padding-left: 20px;
+  color: #cbd5e1;
+}
+
+.experience-item li {
+  margin-bottom: 8px;
+}
+
+/* Projects */
+.project-item {
+  margin-bottom: 30px;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.project-header h3 {
+  font-size: 18px;
+}
+
+.tech-stack {
+  color: #64748b;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+/* Certifications */
+.cert-list {
+  list-style: none;
+}
+
+.cert-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  color: #cbd5e1;
+}
+
+/* Footer */
+footer {
+  background-color: #18181b;
+  padding: 30px 0;
+  text-align: center;
+  color: #64748b;
+  font-size: 14px;
+  border-top: 1px solid #27272a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .header-content {
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .contact-info {
+    justify-content: center;
+  }
+}
